@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+/config.json
+/projects.json
+/projects_*.bak.json
+/data/*
+!/data/OKUBENI.txt
+/runs/
+/cache/
+/python/
+__pycache__/
+*.pyc
+*.zip
+test_out.txt

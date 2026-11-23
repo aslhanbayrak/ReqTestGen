@@ -1,0 +1,14 @@
+<html>
+<head><meta charset="utf-8"><title>/DEMO/HPU/HPU SRS</title></head>
+<body>
+<h1>HPU Software Requirements (synthetic demo data)</h1>
+<h2>4 Hydraulic Pump</h2>
+<h3>4.1 Pump Control</h3>
+<p>HPU_SRS_001 The HPU shall set HPU_PUMP_STATUS to (1) RUNNING when CC_HYD_PUMP_CMD is (1) ON and HPU_OPER_MODE is (2) NORMAL.</p>
+<p>HPU_SRS_002 The HPU shall set HPU_PUMP_STATUS to (0) STOPPED when CC_HYD_PUMP_CMD is (0) OFF.</p>
+<h3>4.2 Pressure Monitoring</h3>
+<p>HPU_SRS_003 The HPU shall set HPU_PRESSURE_WARN to (1) WARNING when HPU_LOW_PRESSURE is (1) TRUE for more than 3 seconds while HPU_PUMP_STATUS is (1) RUNNING.</p>
+<p>Shorter low-pressure indications shall not raise the warning.</p>
+<p>HPU_SRS_004 The HPU shall reset HPU_PRESSURE_WARN to (0) NO_WARNING when HPU_LOW_PRESSURE returns to (0) FALSE.</p>
+</body>
+</html>

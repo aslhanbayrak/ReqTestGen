@@ -1,0 +1,18 @@
+<html>
+<head><meta charset="utf-8"><title>/DEMO/FMU/SMSW_FMU FRS</title></head>
+<body>
+<h1>SMSW_FMU FRS (synthetic demo data)</h1>
+<table border="1">
+<tr><th>ID</th><th>Object Number</th><th>Object Type</th><th>Object Heading</th><th>Object Text</th></tr>
+<tr><td>SMSW_FMU FRS_1</td><td>3</td><td>Heading</td><td>FUNCTIONAL REQUIREMENTS</td><td></td></tr>
+<tr><td>SMSW_FMU FRS_2</td><td>3.1</td><td>Heading</td><td>Pump Control</td><td></td></tr>
+<tr><td>SMSW_FMU FRS_101</td><td>3.1.0-1</td><td>Requirement</td><td></td><td>The FMU shall set FMU_PUMP_STATUS to (1) RUNNING when CC_FUEL_PUMP_CMD is (1) ON and FMU_OPER_MODE is (2) NORMAL.</td></tr>
+<tr><td>SMSW_FMU FRS_102</td><td>3.1.0-2</td><td>Requirement</td><td></td><td>The FMU shall set FMU_PUMP_STATUS to (0) STOPPED when CC_FUEL_PUMP_CMD is (0) OFF.</td></tr>
+<tr><td>SMSW_FMU FRS_103</td><td>3.1.0-3</td><td>Requirement</td><td></td><td>While FMU_OPER_MODE is (1) STANDBY, the FMU shall ignore CC_FUEL_PUMP_CMD and keep FMU_PUMP_STATUS at (0) STOPPED.</td></tr>
+<tr><td>SMSW_FMU FRS_3</td><td>3.2</td><td>Heading</td><td>Fault Monitoring</td><td></td></tr>
+<tr><td>SMSW_FMU FRS_104</td><td>3.2.0-1</td><td>Requirement</td><td></td><td>The FMU shall set FMU_PUMP_FAULT to (1) FAULT when FMU_PUMP_PRESSURE_OK is (0) FALSE for more than 2 seconds while FMU_PUMP_STATUS is (1) RUNNING.<br>The FMU shall keep FMU_PUMP_FAULT at (0) NO_FAULT for shorter pressure losses.</td></tr>
+<tr><td>SMSW_FMU FRS_105</td><td>3.2.0-2</td><td>Requirement</td><td></td><td>The FMU shall report FMU_PUMP_FAULT as (0) NO_FAULT after power-up.</td></tr>
+<tr><td>SMSW_FMU FRS_106</td><td>3.2.0-3</td><td>Information</td><td></td><td>Pressure loss is typically caused by an empty tank or a blocked filter.</td></tr>
+</table>
+</body>
+</html>

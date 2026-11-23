@@ -1,0 +1,21 @@
+{
+  "signals": ["models/"],
+  "projects": [
+    {
+      "name": "ProjeA",
+      "requirements": "proje_a/requirements.html",
+      "tests": "proje_a/tests.html"
+    },
+    {
+      "name": "ProjeB",
+      "requirements": "proje_b/srs.html",
+      "tests": "proje_b/stp.html",
+      "html": {"columns": {"main": ["VCU Requirements", "VCU Test Procedure"]}}
+    },
+    {
+      "name": "ProjeC",
+      "requirements": "proje_c/requirements.html",
+      "docs": ["proje_c/docs/"]
+    }
+  ]
+}

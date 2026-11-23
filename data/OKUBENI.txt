@@ -1,0 +1,9 @@
+Bu klasöre DOORS HTML export'larını koyun. Her program için bir klasör:
+
+  data\GMH\       test dokümanı, SSS, MKSD, SSDD ... (dosya adları önemli değil)
+  data\HURKUS2\   test dokümanı, GMFD, MKB ...
+  data\YENI\      testi olmayan yeni proje: gereksinim modülü + dokümanlar
+  data\ORTAK\     (isteğe bağlı) tüm programlarda ortak dokümanlar
+
+Sonra baslat.bat > 2 (tara) ya da 7 (tam otomatik).
+Bu klasör taşıma paketine girmez (gerçek veri iç ağda kalır).

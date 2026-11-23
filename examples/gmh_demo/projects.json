@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "name": "GMH_FLIR_DEMO",
+      "requirements": "CC_SSS_FLIR_SSS.htm",
+      "tests": "aselflir-testdoc.htm",
+      "docs": [
+        {"path": "CC_MKSD_CC_MKSD.htm", "role": "MKSD - MFD/KDU ekran formatları"},
+        {"path": "CC_SSDD_CC_SSDD.htm", "role": "SSDD - sistem/alt sistem tasarımı"}
+      ],
+      "doors": {"requirement_filter": {"Verification Method": ["Test"]}}
+    }
+  ]
+}

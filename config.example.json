@@ -1,0 +1,35 @@
+{
+  "llm": {
+    "chat_model": "",
+    "embed_model": "",
+    "judge_model": "",
+    "concurrency": 2,
+    "temperature": 0.2,
+    "max_tokens": 6000,
+    "json_mode": true,
+    "extra_body": {}
+  },
+  "retrieval": {
+    "k": 3,
+    "max_example_chars": 9000,
+    "max_cases_per_example": 4,
+    "neighbor_requirements": 2
+  },
+  "knowledge": {
+    "k": 4,
+    "max_chars": 9000,
+    "follow_links": true,
+    "link_depth": 1,
+    "max_linked": 8
+  },
+  "generation": {
+    "prompt_attributes": ["rationale", "verification method", "verification level", "configuration", "note", "expected", "source"],
+    "context_file": ""
+  },
+  "doors": {
+    "requirement_filter": {}
+  },
+  "html": {
+    "columns": {}
+  }
+}

@@ -1,0 +1,26 @@
+<html>
+<head><meta charset="utf-8"><title>/DEMO/FMU/SMSW_FMU SITP</title></head>
+<body>
+<h1>SMSW_FMU SITP (synthetic demo data)</h1>
+<table border="1">
+<tr><th>ID</th><th>Object Number</th><th>Object Type</th><th>Object Heading</th><th>Object Text</th><th>Expected Results</th><th>FRS Link(s)</th></tr>
+<tr><td>SMSW_FMU_SITP_1</td><td>1</td><td>Heading</td><td>SMSW FMU TEST PROCEDURE</td><td></td><td></td><td></td></tr>
+<tr><td>SMSW_FMU_SITP_2</td><td>1.0-1</td><td>Remark</td><td></td><td>The aim of this test procedure is to verify the FMU pump functions.</td><td></td><td></td></tr>
+<tr><td>SMSW_FMU_SITP_3</td><td>1.1</td><td>Test Procedure</td><td>Test Procedure</td><td>1.1 Test Procedure</td><td></td><td></td></tr>
+<tr><td>SMSW_FMU_SITP_4</td><td>1.1.1</td><td>Test Part</td><td>PUMP CONTROL</td><td>1.1.1 PUMP CONTROL</td><td></td><td></td></tr>
+<tr><td>SMSW_FMU_SITP_5</td><td>1.1.1.1</td><td>Test Part</td><td>Pump Run Command</td><td>1.1.1.1 Pump Run Command</td><td></td><td></td></tr>
+<tr><td>SMSW_FMU_SITP_6</td><td>1.1.1.1.0-1</td><td>Test Precondition</td><td></td><td>Using Simulator set the followings;<br>CDU simulator;<br>FMU_OPER_MODE : (2) NORMAL<br>CC_FUEL_PUMP_CMD : (0) OFF<br>Inspect FMU LRM RX</td><td>Verify that,<br>FMU_PUMP_STATUS is displayed as (0) STOPPED</td><td>SMSW_FMU FRS_101</td></tr>
+<tr><td>SMSW_FMU_SITP_7</td><td>1.1.1.1.0-2</td><td>Test Step</td><td></td><td>Using Simulator set the followings;<br>CDU simulator;<br>CC_FUEL_PUMP_CMD : (1) ON<br>Wait 1 second<br>Inspect FMU LRM RX</td><td>Verify that,<br>FMU_PUMP_STATUS is displayed as (1) RUNNING</td><td>SMSW_FMU FRS_101</td></tr>
+<tr><td>SMSW_FMU_SITP_8</td><td>1.1.1.2</td><td>Test Part</td><td>Pump Stop Command</td><td>1.1.1.2 Pump Stop Command</td><td></td><td></td></tr>
+<tr><td>SMSW_FMU_SITP_9</td><td>1.1.1.2.0-1</td><td>Test Precondition</td><td></td><td>Using Simulator set the followings;<br>CDU simulator;<br>FMU_OPER_MODE : (2) NORMAL<br>CC_FUEL_PUMP_CMD : (1) ON<br>Inspect FMU LRM RX</td><td>Verify that,<br>FMU_PUMP_STATUS is displayed as (1) RUNNING</td><td>SMSW_FMU FRS_102</td></tr>
+<tr><td>SMSW_FMU_SITP_10</td><td>1.1.1.2.0-2</td><td>Test Step</td><td></td><td>Using Simulator set the followings;<br>CDU simulator;<br>CC_FUEL_PUMP_CMD : (0) OFF<br>Wait 1 second<br>Inspect FMU LRM RX</td><td>Verify that,<br>FMU_PUMP_STATUS is displayed as (0) STOPPED</td><td>SMSW_FMU FRS_102</td></tr>
+<tr><td>SMSW_FMU_SITP_11</td><td>1.1.1.3</td><td>Test Part</td><td>Pump Command in Standby</td><td>1.1.1.3 Pump Command in Standby</td><td></td><td></td></tr>
+<tr><td>SMSW_FMU_SITP_12</td><td>1.1.1.3.0-1</td><td>Test Step</td><td></td><td>Using Simulator set the followings;<br>CDU simulator;<br>FMU_OPER_MODE : (1) STANDBY<br>CC_FUEL_PUMP_CMD : (1) ON<br>Wait 1 second<br>Inspect FMU LRM RX</td><td>Verify that,<br>FMU_PUMP_STATUS is displayed as (0) STOPPED</td><td>SMSW_FMU FRS_103</td></tr>
+<tr><td>SMSW_FMU_SITP_13</td><td>1.1.2</td><td>Test Part</td><td>FAULT MONITORING</td><td>1.1.2 FAULT MONITORING</td><td></td><td></td></tr>
+<tr><td>SMSW_FMU_SITP_14</td><td>1.1.2.1</td><td>Test Part</td><td>Pump Pressure Fault</td><td>1.1.2.1 Pump Pressure Fault</td><td></td><td></td></tr>
+<tr><td>SMSW_FMU_SITP_15</td><td>1.1.2.1.0-1</td><td>Test Precondition</td><td></td><td>Using Simulator set the followings;<br>CDU simulator;<br>FMU_OPER_MODE : (2) NORMAL<br>CC_FUEL_PUMP_CMD : (1) ON<br>PUMP simulator;<br>FMU_PUMP_PRESSURE_OK : (1) TRUE<br>Inspect FMU LRM RX</td><td>Verify that,<br>FMU_PUMP_STATUS is displayed as (1) RUNNING<br>FMU_PUMP_FAULT is displayed as (0) NO_FAULT</td><td>SMSW_FMU FRS_104</td></tr>
+<tr><td>SMSW_FMU_SITP_16</td><td>1.1.2.1.0-2</td><td>Test Step</td><td></td><td>Using Simulator set the followings;<br>PUMP simulator;<br>FMU_PUMP_PRESSURE_OK : (0) FALSE<br>Wait 1 second<br>Inspect FMU LRM RX</td><td>Verify that,<br>FMU_PUMP_FAULT is displayed as (0) NO_FAULT</td><td>SMSW_FMU FRS_104</td></tr>
+<tr><td>SMSW_FMU_SITP_17</td><td>1.1.2.1.0-3</td><td>Test Step</td><td></td><td>Wait 2 seconds<br>Inspect FMU LRM RX</td><td>Verify that,<br>FMU_PUMP_FAULT is displayed as (1) FAULT</td><td>SMSW_FMU FRS_104</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- synthetic demo device model in the format AVISTA's SimulatorModelIndex reads -->
+<Device Name="HPU_LRM" DisplayName="HPU LRM">
+  <SubDevices>
+    <SubDevice Type="SIMPLE" Name="HPU_BUS">
+      <TransmitReceive>RX</TransmitReceive>
+      <SimpleSubPackets>
+        <SimpleSubPacket Name="HPU_STATUS_PKT">
+          <SimpleMessages>
+            <SimpleMessage Name="HPU_STATUS">
+              <SubFields>
+                <SubField Name="HPU_PUMP_STATUS" Guid="6f1c1b3e-0000-4000-8000-000000000001">
+                  <Enumerations><Enumerator Name="STOPPED" Value="0"/><Enumerator Name="RUNNING" Value="1"/></Enumerations>
+                </SubField>
+                <SubField Name="HPU_PRESSURE_WARN" Guid="6f1c1b3e-0000-4000-8000-000000000002">
+                  <Enumerations><Enumerator Name="NO_WARNING" Value="0"/><Enumerator Name="WARNING" Value="1"/></Enumerations>
+                </SubField>
+              </SubFields>
+            </SimpleMessage>
+          </SimpleMessages>
+        </SimpleSubPacket>
+      </SimpleSubPackets>
+    </SubDevice>
+    <SubDevice Type="SIMPLE" Name="CDU_BUS">
+      <TransmitReceive>TX</TransmitReceive>
+      <SimpleSubPackets>
+        <SimpleSubPacket Name="CDU_CMD_PKT">
+          <SimpleMessages>
+            <SimpleMessage Name="HPU_CMD">
+              <SubFields>
+                <SubField Name="CC_HYD_PUMP_CMD" Guid="6f1c1b3e-0000-4000-8000-000000000003">
+                  <Enumerations><Enumerator Name="OFF" Value="0"/><Enumerator Name="ON" Value="1"/></Enumerations>
+                </SubField>
+                <SubField Name="HPU_OPER_MODE" Guid="6f1c1b3e-0000-4000-8000-000000000004">
+                  <Enumerations><Enumerator Name="STANDBY" Value="1"/><Enumerator Name="NORMAL" Value="2"/></Enumerations>
+                </SubField>
+                <SubField Name="HPU_LOW_PRESSURE" Guid="6f1c1b3e-0000-4000-8000-000000000005">
+                  <Enumerations><Enumerator Name="FALSE" Value="0"/><Enumerator Name="TRUE" Value="1"/></Enumerations>
+                </SubField>
+              </SubFields>
+            </SimpleMessage>
+          </SimpleMessages>
+        </SimpleSubPacket>
+      </SimpleSubPackets>
+    </SubDevice>
+  </SubDevices>
+</Device>

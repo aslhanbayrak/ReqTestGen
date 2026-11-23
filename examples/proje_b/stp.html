@@ -1,0 +1,22 @@
+<html>
+<head><meta charset="utf-8"><title>/DEMO/VCU/VCU STP</title></head>
+<body>
+<table border="1" cellpadding="3">
+<tr><th>Object Identifier</th><th>Object Type</th><th>VCU Test Procedure</th><th>Expected Results</th><th>Verifies</th></tr>
+<tr><td>VCU-STP-1</td><td>Test Procedure</td><td><b>VCU Crossfeed Valve Tests</b></td><td></td><td></td></tr>
+<tr><td>VCU-STP-2</td><td>Test Part</td><td><b>Valve Open Command</b></td><td></td><td></td></tr>
+<tr><td>VCU-STP-3</td><td>Test Precondition</td><td>Using Simulator set the followings;<br>CDU simulator;<br>VCU_OPER_MODE : (2) NORMAL<br>CC_XFEED_VALVE_CMD : (0) CLOSE<br>Inspect VCU LRM RX</td><td>Verify that,<br>VCU_XFEED_VALVE_POS is displayed as (0) CLOSED</td><td>VCU-REQ-0010</td></tr>
+<tr><td>VCU-STP-4</td><td>Test Step</td><td>Using Simulator set the followings;<br>CDU simulator;<br>CC_XFEED_VALVE_CMD : (1) OPEN<br>Wait 3 seconds<br>Inspect VCU LRM RX</td><td>Verify that,<br>VCU_XFEED_VALVE_POS is displayed as (1) OPEN</td><td>VCU-REQ-0010</td></tr>
+<tr><td>VCU-STP-5</td><td>Test Part</td><td><b>Valve Close Command</b></td><td></td><td></td></tr>
+<tr><td>VCU-STP-6</td><td>Test Precondition</td><td>Using Simulator set the followings;<br>CDU simulator;<br>VCU_OPER_MODE : (2) NORMAL<br>CC_XFEED_VALVE_CMD : (1) OPEN<br>Wait 3 seconds<br>Inspect VCU LRM RX</td><td>Verify that,<br>VCU_XFEED_VALVE_POS is displayed as (1) OPEN</td><td>VCU-REQ-0020</td></tr>
+<tr><td>VCU-STP-7</td><td>Test Step</td><td>Using Simulator set the followings;<br>CDU simulator;<br>CC_XFEED_VALVE_CMD : (0) CLOSE<br>Wait 3 seconds<br>Inspect VCU LRM RX</td><td>Verify that,<br>VCU_XFEED_VALVE_POS is displayed as (0) CLOSED</td><td>VCU-REQ-0020</td></tr>
+<tr><td>VCU-STP-8</td><td>Test Part</td><td><b>Valve Command in Standby</b></td><td></td><td></td></tr>
+<tr><td>VCU-STP-9</td><td>Test Precondition</td><td>Using Simulator set the followings;<br>CDU simulator;<br>VCU_OPER_MODE : (2) NORMAL<br>CC_XFEED_VALVE_CMD : (0) CLOSE<br>Wait 3 seconds<br>CDU simulator;<br>VCU_OPER_MODE : (1) STANDBY<br>Inspect VCU LRM RX</td><td>Verify that,<br>VCU_XFEED_VALVE_POS is displayed as (0) CLOSED</td><td>VCU-REQ-0030</td></tr>
+<tr><td>VCU-STP-10</td><td>Test Step</td><td>Using Simulator set the followings;<br>CDU simulator;<br>CC_XFEED_VALVE_CMD : (1) OPEN<br>Wait 3 seconds<br>Inspect VCU LRM RX</td><td>Verify that,<br>VCU_XFEED_VALVE_POS is displayed as (0) CLOSED</td><td>VCU-REQ-0030</td></tr>
+<tr><td>VCU-STP-11</td><td>Test Part</td><td><b>Valve Position Fault</b></td><td></td><td></td></tr>
+<tr><td>VCU-STP-12</td><td>Test Precondition</td><td>Using Simulator set the followings;<br>CDU simulator;<br>VCU_OPER_MODE : (2) NORMAL<br>CC_XFEED_VALVE_CMD : (0) CLOSE<br>VALVE simulator;<br>Disable valve position feedback.<br>Inspect VCU LRM RX</td><td>Verify that,<br>VCU_VALVE_FAULT is displayed as (0) NO_FAULT</td><td>VCU-REQ-0040</td></tr>
+<tr><td>VCU-STP-13</td><td>Test Step</td><td>Using Simulator set the followings;<br>CDU simulator;<br>CC_XFEED_VALVE_CMD : (1) OPEN<br>Wait 4 seconds<br>Inspect VCU LRM RX</td><td>Verify that,<br>VCU_VALVE_FAULT is displayed as (0) NO_FAULT</td><td>VCU-REQ-0040</td></tr>
+<tr><td>VCU-STP-14</td><td>Test Step</td><td>Wait 2 seconds<br>Inspect VCU LRM RX</td><td>Verify that,<br>VCU_VALVE_FAULT is displayed as (1) FAULT</td><td>VCU-REQ-0040</td></tr>
+</table>
+</body>
+</html>

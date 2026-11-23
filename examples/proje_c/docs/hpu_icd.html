@@ -1,0 +1,19 @@
+<html>
+<head><meta charset="utf-8"><title>HPU ICD</title></head>
+<body>
+<h1>HPU Interface Control Document (synthetic demo data)</h1>
+<h2>1 Interfaces</h2>
+<p>The HPU receives commands from the CDU and reports status to the FMU LRM over the avionics bus.
+In the system integration test bench the CDU simulator sends the commands, the HYD simulator drives the
+pressure switch input and the HPU outputs are inspected on the HPU LRM RX channel.</p>
+<h2>2 Signals</h2>
+<table border="1">
+<tr><th>Signal</th><th>Direction</th><th>Source</th><th>Values</th></tr>
+<tr><td>CC_HYD_PUMP_CMD</td><td>input</td><td>CDU</td><td>(0) OFF, (1) ON</td></tr>
+<tr><td>HPU_OPER_MODE</td><td>input</td><td>CDU</td><td>(1) STANDBY, (2) NORMAL</td></tr>
+<tr><td>HPU_LOW_PRESSURE</td><td>input</td><td>HYD pressure switch</td><td>(0) FALSE, (1) TRUE</td></tr>
+<tr><td>HPU_PUMP_STATUS</td><td>output</td><td>HPU</td><td>(0) STOPPED, (1) RUNNING</td></tr>
+<tr><td>HPU_PRESSURE_WARN</td><td>output</td><td>HPU</td><td>(0) NO_WARNING, (1) WARNING</td></tr>
+</table>
+</body>
+</html>

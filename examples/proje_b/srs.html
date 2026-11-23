@@ -1,0 +1,17 @@
+<html>
+<head><meta charset="utf-8"><title>/DEMO/VCU/VCU SRS</title></head>
+<body>
+<table border="1" cellpadding="3">
+<tr><th>Object Identifier</th><th>VCU Requirements</th></tr>
+<tr><td></td><td><b>2 Software Requirements</b></td></tr>
+<tr><td></td><td><b>2.4 Crossfeed Valve</b></td></tr>
+<tr><td></td><td><b>2.4.1 Valve Commands</b></td></tr>
+<tr><td>VCU-REQ-0010</td><td>When VCU_OPER_MODE is (2) NORMAL and CC_XFEED_VALVE_CMD changes to (1) OPEN, the VCU shall report VCU_XFEED_VALVE_POS as (1) OPEN within 3 seconds.</td></tr>
+<tr><td>VCU-REQ-0020</td><td>When CC_XFEED_VALVE_CMD changes to (0) CLOSE, the VCU shall report VCU_XFEED_VALVE_POS as (0) CLOSED within 3 seconds.</td></tr>
+<tr><td>VCU-REQ-0030</td><td>In VCU_OPER_MODE (1) STANDBY the VCU shall not move the crossfeed valve: VCU_XFEED_VALVE_POS shall keep its last value regardless of CC_XFEED_VALVE_CMD.</td></tr>
+<tr><td></td><td><b>2.4.2 Valve Monitoring</b></td></tr>
+<tr><td>VCU-REQ-0040</td><td>The VCU shall set VCU_VALVE_FAULT to (1) FAULT if VCU_XFEED_VALVE_POS does not reach the commanded position within 5 seconds.</td></tr>
+<tr><td>VCU-REQ-0050</td><td>The VCU shall transmit VCU_XFEED_VALVE_POS every 100 ms.</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "docs": [
+    {"path": "data/ORTAK/CC_SSS.htm", "role": "Ortak SSS - tüm programlar"}
+  ],
+  "projects": [
+    {
+      "name": "GMH_FLIR",
+      "requirements": "data/GMH/CC_SSS_FLIR_SSS.htm",
+      "tests": "data/GMH/aselflir-testdoc.htm",
+      "docs": [
+        {"path": "data/GMH/CC_MKSD_CC_MKSD.htm", "role": "MKSD - MFD/KDU ekran ve tuş formatları"},
+        {"path": "data/GMH/CC_SSDD_CC_SSDD.htm", "role": "SSDD - sistem/alt sistem tasarımı"},
+        {"path": "data/GMH/test_ortami/", "role": "Test ortamı / TUHP simülatör konfigürasyonları"}
+      ],
+      "doors": {"requirement_filter": {"Verification Method": ["Test"]}}
+    },
+    {
+      "name": "HURKUS2_ORNEK",
+      "requirements": "data/HURKUS2/<gereksinim modülü>.htm",
+      "tests": "data/HURKUS2/<test dokümanı>.htm",
+      "docs": [
+        {"path": "data/HURKUS2/<GMFD>.htm", "role": "GMFD - <rolü: iç ağda belirlenecek>"},
+        {"path": "data/HURKUS2/<MKB>.htm", "role": "MKB - <rolü: iç ağda belirlenecek>"}
+      ],
+      "html": {"columns": {}},
+      "doors": {}
+    },
+    {
+      "name": "YENI_PROJE",
+      "requirements": "data/YENI/<gereksinim modülü>.htm",
+      "docs": ["data/YENI/dokumanlar/"]
+    }
+  ]
+}
